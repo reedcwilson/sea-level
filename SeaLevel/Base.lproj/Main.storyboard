@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sea_Level" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Am I at sea level?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDv-A3-MwQ">
+                                <rect key="frame" x="157" y="50" width="286.5" height="42.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="P95-XP-VjM">
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1q-QF-vMm">
+                                <rect key="frame" x="176" y="216" width="248.5" height="168"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="144"/>
+                                <color key="textColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.9960784912109375" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="2"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fu2-zd-Y7y">
+                                <rect key="frame" x="204" y="216" width="192" height="168"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="144"/>
+                                <color key="textColor" red="0.99215692280000001" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="2"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e28-VF-Ffo">
+                                <rect key="frame" x="255" y="216" width="88" height="168"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="144"/>
+                                <color key="textColor" red="0.99215692280000001" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="2"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckA-tN-N6J">
+                                <rect key="frame" x="194" y="276" width="212" height="48"/>
+                                <color key="backgroundColor" red="0.99215692281723022" green="0.9960784912109375" blue="0.9960784912109375" alpha="0.20000000000000001" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="10" maxX="15" maxY="10"/>
+                                <state key="normal" title="Detect Sea Level">
+                                    <color key="titleColor" red="0.99215692280000001" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="detectSeaLevelExecute:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7HS-nt-kWY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23921568630000001" green="0.49803921569999998" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="yDv-A3-MwQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="0tT-ey-Au1"/>
+                            <constraint firstItem="Fu2-zd-Y7y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4iX-gg-Iqy"/>
+                            <constraint firstItem="i1q-QF-vMm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="D1W-Pa-AMt"/>
+                            <constraint firstItem="i1q-QF-vMm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ICc-e4-23q"/>
+                            <constraint firstItem="ckA-tN-N6J" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UGQ-4l-NEM"/>
+                            <constraint firstItem="P95-XP-VjM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cLt-IA-2d4"/>
+                            <constraint firstItem="e28-VF-Ffo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="e8O-XX-lu5"/>
+                            <constraint firstItem="yDv-A3-MwQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g99-bk-r8F"/>
+                            <constraint firstItem="P95-XP-VjM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lxr-wE-x2B"/>
+                            <constraint firstItem="ckA-tN-N6J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oBK-EA-xz6"/>
+                            <constraint firstItem="Fu2-zd-Y7y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uUR-uj-HSL"/>
+                            <constraint firstItem="e28-VF-Ffo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wAx-zY-G8B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detectSeaLevelButton" destination="ckA-tN-N6J" id="Xg8-bj-81v"/>
+                        <outlet property="loadingSpinner" destination="P95-XP-VjM" id="r7u-ri-6VK"/>
+                        <outlet property="noLabel" destination="Fu2-zd-Y7y" id="4x9-ND-FsS"/>
+                        <outlet property="questionLabel" destination="e28-VF-Ffo" id="gbE-qh-IKf"/>
+                        <outlet property="yesLabel" destination="i1q-QF-vMm" id="3RJ-bf-iAe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="388"/>
+        </scene>
+    </scenes>
+</document>

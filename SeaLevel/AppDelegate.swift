@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  sea-level
+//  SeaLevel
 //
-//  Created by Reed Wilson on 8/28/15.
-//  Copyright (c) 2015 Reed Wilson. All rights reserved.
+//  Created by Reed Wilson on 9/17/15.
+//  Copyright © 2015 Reed Wilson. All rights reserved.
 //
 
 import UIKit

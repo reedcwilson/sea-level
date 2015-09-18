@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B17810A31BAB4A81004DC2B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17810A21BAB4A81004DC2B7 /* AppDelegate.swift */; };
+		B17810A51BAB4A81004DC2B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17810A41BAB4A81004DC2B7 /* ViewController.swift */; };
+		B17810A81BAB4A81004DC2B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B17810A61BAB4A81004DC2B7 /* Main.storyboard */; };
+		B17810AA1BAB4A81004DC2B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B17810A91BAB4A81004DC2B7 /* Assets.xcassets */; };
+		B17810AD1BAB4A81004DC2B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B17810AB1BAB4A81004DC2B7 /* LaunchScreen.storyboard */; };
+		B17810B81BAB4A81004DC2B7 /* SeaLevelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17810B71BAB4A81004DC2B7 /* SeaLevelTests.swift */; };
+		B17810C31BAB4A81004DC2B7 /* SeaLevelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17810C21BAB4A81004DC2B7 /* SeaLevelUITests.swift */; };
+		B17810D31BAB4BA0004DC2B7 /* SeaLevelFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17810D21BAB4BA0004DC2B7 /* SeaLevelFinder.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B17810B41BAB4A81004DC2B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B17810971BAB4A81004DC2B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B178109E1BAB4A81004DC2B7;
+			remoteInfo = SeaLevel;
+		};
+		B17810BF1BAB4A81004DC2B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B17810971BAB4A81004DC2B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B178109E1BAB4A81004DC2B7;
+			remoteInfo = SeaLevel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B178109F1BAB4A81004DC2B7 /* Sea Level.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sea Level.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B17810A21BAB4A81004DC2B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B17810A41BAB4A81004DC2B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B17810A71BAB4A81004DC2B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B17810A91BAB4A81004DC2B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B17810AC1BAB4A81004DC2B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B17810AE1BAB4A81004DC2B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B17810B31BAB4A81004DC2B7 /* SeaLevelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeaLevelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B17810B71BAB4A81004DC2B7 /* SeaLevelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeaLevelTests.swift; sourceTree = "<group>"; };
+		B17810B91BAB4A81004DC2B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B17810BE1BAB4A81004DC2B7 /* SeaLevelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeaLevelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B17810C21BAB4A81004DC2B7 /* SeaLevelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeaLevelUITests.swift; sourceTree = "<group>"; };
+		B17810C41BAB4A81004DC2B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B17810D21BAB4BA0004DC2B7 /* SeaLevelFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeaLevelFinder.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B178109C1BAB4A81004DC2B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B17810B01BAB4A81004DC2B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B17810BB1BAB4A81004DC2B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B17810961BAB4A81004DC2B7 = {
+			isa = PBXGroup;
+			children = (
+				B17810A11BAB4A81004DC2B7 /* SeaLevel */,
+				B17810B61BAB4A81004DC2B7 /* SeaLevelTests */,
+				B17810C11BAB4A81004DC2B7 /* SeaLevelUITests */,
+				B17810A01BAB4A81004DC2B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B17810A01BAB4A81004DC2B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B178109F1BAB4A81004DC2B7 /* Sea Level.app */,
+				B17810B31BAB4A81004DC2B7 /* SeaLevelTests.xctest */,
+				B17810BE1BAB4A81004DC2B7 /* SeaLevelUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B17810A11BAB4A81004DC2B7 /* SeaLevel */ = {
+			isa = PBXGroup;
+			children = (
+				B17810D21BAB4BA0004DC2B7 /* SeaLevelFinder.swift */,
+				B17810A21BAB4A81004DC2B7 /* AppDelegate.swift */,
+				B17810A41BAB4A81004DC2B7 /* ViewController.swift */,
+				B17810A61BAB4A81004DC2B7 /* Main.storyboard */,
+				B17810A91BAB4A81004DC2B7 /* Assets.xcassets */,
+				B17810AB1BAB4A81004DC2B7 /* LaunchScreen.storyboard */,
+				B17810AE1BAB4A81004DC2B7 /* Info.plist */,
+			);
+			path = SeaLevel;
+			sourceTree = "<group>";
+		};
+		B17810B61BAB4A81004DC2B7 /* SeaLevelTests */ = {
+			isa = PBXGroup;
+			children = (
+				B17810B71BAB4A81004DC2B7 /* SeaLevelTests.swift */,
+				B17810B91BAB4A81004DC2B7 /* Info.plist */,
+			);
+			path = SeaLevelTests;
+			sourceTree = "<group>";
+		};
+		B17810C11BAB4A81004DC2B7 /* SeaLevelUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B17810C21BAB4A81004DC2B7 /* SeaLevelUITests.swift */,
+				B17810C41BAB4A81004DC2B7 /* Info.plist */,
+			);
+			path = SeaLevelUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B178109E1BAB4A81004DC2B7 /* SeaLevel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B17810C71BAB4A81004DC2B7 /* Build configuration list for PBXNativeTarget "SeaLevel" */;
+			buildPhases = (
+				B178109B1BAB4A81004DC2B7 /* Sources */,
+				B178109C1BAB4A81004DC2B7 /* Frameworks */,
+				B178109D1BAB4A81004DC2B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SeaLevel;
+			productName = SeaLevel;
+			productReference = B178109F1BAB4A81004DC2B7 /* Sea Level.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B17810B21BAB4A81004DC2B7 /* SeaLevelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B17810CA1BAB4A81004DC2B7 /* Build configuration list for PBXNativeTarget "SeaLevelTests" */;
+			buildPhases = (
+				B17810AF1BAB4A81004DC2B7 /* Sources */,
+				B17810B01BAB4A81004DC2B7 /* Frameworks */,
+				B17810B11BAB4A81004DC2B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B17810B51BAB4A81004DC2B7 /* PBXTargetDependency */,
+			);
+			name = SeaLevelTests;
+			productName = SeaLevelTests;
+			productReference = B17810B31BAB4A81004DC2B7 /* SeaLevelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B17810BD1BAB4A81004DC2B7 /* SeaLevelUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B17810CD1BAB4A81004DC2B7 /* Build configuration list for PBXNativeTarget "SeaLevelUITests" */;
+			buildPhases = (
+				B17810BA1BAB4A81004DC2B7 /* Sources */,
+				B17810BB1BAB4A81004DC2B7 /* Frameworks */,
+				B17810BC1BAB4A81004DC2B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B17810C01BAB4A81004DC2B7 /* PBXTargetDependency */,
+			);
+			name = SeaLevelUITests;
+			productName = SeaLevelUITests;
+			productReference = B17810BE1BAB4A81004DC2B7 /* SeaLevelUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B17810971BAB4A81004DC2B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Reed Wilson";
+				TargetAttributes = {
+					B178109E1BAB4A81004DC2B7 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = TZLA86LLMM;
+					};
+					B17810B21BAB4A81004DC2B7 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = TZLA86LLMM;
+						TestTargetID = B178109E1BAB4A81004DC2B7;
+					};
+					B17810BD1BAB4A81004DC2B7 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = TZLA86LLMM;
+						TestTargetID = B178109E1BAB4A81004DC2B7;
+					};
+				};
+			};
+			buildConfigurationList = B178109A1BAB4A81004DC2B7 /* Build configuration list for PBXProject "SeaLevel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B17810961BAB4A81004DC2B7;
+			productRefGroup = B17810A01BAB4A81004DC2B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B178109E1BAB4A81004DC2B7 /* SeaLevel */,
+				B17810B21BAB4A81004DC2B7 /* SeaLevelTests */,
+				B17810BD1BAB4A81004DC2B7 /* SeaLevelUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B178109D1BAB4A81004DC2B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B17810AD1BAB4A81004DC2B7 /* LaunchScreen.storyboard in Resources */,
+				B17810AA1BAB4A81004DC2B7 /* Assets.xcassets in Resources */,
+				B17810A81BAB4A81004DC2B7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B17810B11BAB4A81004DC2B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B17810BC1BAB4A81004DC2B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B178109B1BAB4A81004DC2B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B17810D31BAB4BA0004DC2B7 /* SeaLevelFinder.swift in Sources */,
+				B17810A51BAB4A81004DC2B7 /* ViewController.swift in Sources */,
+				B17810A31BAB4A81004DC2B7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B17810AF1BAB4A81004DC2B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B17810B81BAB4A81004DC2B7 /* SeaLevelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B17810BA1BAB4A81004DC2B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B17810C31BAB4A81004DC2B7 /* SeaLevelUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B17810B51BAB4A81004DC2B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B178109E1BAB4A81004DC2B7 /* SeaLevel */;
+			targetProxy = B17810B41BAB4A81004DC2B7 /* PBXContainerItemProxy */;
+		};
+		B17810C01BAB4A81004DC2B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B178109E1BAB4A81004DC2B7 /* SeaLevel */;
+			targetProxy = B17810BF1BAB4A81004DC2B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B17810A61BAB4A81004DC2B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B17810A71BAB4A81004DC2B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B17810AB1BAB4A81004DC2B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B17810AC1BAB4A81004DC2B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B17810C51BAB4A81004DC2B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B17810C61BAB4A81004DC2B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B17810C81BAB4A81004DC2B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SeaLevel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reedcwilson.SeaLevel;
+				PRODUCT_NAME = "Sea Level";
+			};
+			name = Debug;
+		};
+		B17810C91BAB4A81004DC2B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SeaLevel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reedcwilson.SeaLevel;
+				PRODUCT_NAME = "Sea Level";
+			};
+			name = Release;
+		};
+		B17810CB1BAB4A81004DC2B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SeaLevelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reedcwilson.SeaLevelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SeaLevel.app/SeaLevel";
+			};
+			name = Debug;
+		};
+		B17810CC1BAB4A81004DC2B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SeaLevelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reedcwilson.SeaLevelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SeaLevel.app/SeaLevel";
+			};
+			name = Release;
+		};
+		B17810CE1BAB4A81004DC2B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SeaLevelUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reedcwilson.SeaLevelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SeaLevel;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B17810CF1BAB4A81004DC2B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SeaLevelUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reedcwilson.SeaLevelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SeaLevel;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B178109A1BAB4A81004DC2B7 /* Build configuration list for PBXProject "SeaLevel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B17810C51BAB4A81004DC2B7 /* Debug */,
+				B17810C61BAB4A81004DC2B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B17810C71BAB4A81004DC2B7 /* Build configuration list for PBXNativeTarget "SeaLevel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B17810C81BAB4A81004DC2B7 /* Debug */,
+				B17810C91BAB4A81004DC2B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B17810CA1BAB4A81004DC2B7 /* Build configuration list for PBXNativeTarget "SeaLevelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B17810CB1BAB4A81004DC2B7 /* Debug */,
+				B17810CC1BAB4A81004DC2B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B17810CD1BAB4A81004DC2B7 /* Build configuration list for PBXNativeTarget "SeaLevelUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B17810CE1BAB4A81004DC2B7 /* Debug */,
+				B17810CF1BAB4A81004DC2B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B17810971BAB4A81004DC2B7 /* Project object */;
+}

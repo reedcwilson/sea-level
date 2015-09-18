@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>sea-level.xcscheme</key>
+		<key>SeaLevel.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>B13659071B91780D00292933</key>
+		<key>B178109E1BAB4A81004DC2B7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B136591C1B91780E00292933</key>
+		<key>B17810B21BAB4A81004DC2B7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B17810BD1BAB4A81004DC2B7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
