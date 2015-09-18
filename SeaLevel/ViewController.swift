@@ -71,11 +71,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func displayYes() {
         resetLabels()
         yesLabel.hidden = false
+        view?.backgroundColor = UIColor(patternImage: UIImage(named: "Ocean.png")!)
     }
     
     func displayNo() {
         resetLabels()
         noLabel.hidden = false
+        view?.backgroundColor = UIColor(patternImage: UIImage(named: "Mountains.png")!)
     }
     
     func displayQuestion() {

@@ -43,8 +43,8 @@
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e28-VF-Ffo">
-                                <rect key="frame" x="255" y="216" width="88" height="168"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e28-VF-Ffo">
+                                <rect key="frame" x="256" y="216" width="88" height="168"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="144"/>
                                 <color key="textColor" red="0.99215692280000001" green="0.99607849120000003" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
@@ -85,6 +85,8 @@
                         <outlet property="loadingSpinner" destination="P95-XP-VjM" id="r7u-ri-6VK"/>
                         <outlet property="noLabel" destination="Fu2-zd-Y7y" id="4x9-ND-FsS"/>
                         <outlet property="questionLabel" destination="e28-VF-Ffo" id="gbE-qh-IKf"/>
+                        <outlet property="storyboard" destination="8bC-Xf-vdC" id="NeS-Ud-JPr"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="T7L-8Y-JtR"/>
                         <outlet property="yesLabel" destination="i1q-QF-vMm" id="3RJ-bf-iAe"/>
                     </connections>
                 </viewController>
