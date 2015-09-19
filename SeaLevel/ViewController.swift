@@ -22,6 +22,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         UIApplication.sharedApplication().openURL(settingsUrl!)
     }
     
+    @IBAction func settingsButtonExecute(sender: AnyObject) {
+        let settingsViewController = SettingsViewController()
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.view.bounds;
+        
+        settingsViewController.view.frame = self.view.bounds;
+        settingsViewController.view.backgroundColor = UIColor.clearColor()
+        settingsViewController.view.insertSubview(blurEffectView, atIndex:0)
+        settingsViewController.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
+        
+        self.presentViewController(settingsViewController, animated:true, completion:nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         manager.delegate = self
@@ -33,7 +47,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             manager.requestWhenInUseAuthorization()
         }
     }
-    
+
     func locationManager(location: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus)
     {
         if status == .AuthorizedAlways || status == .AuthorizedWhenInUse {
@@ -48,10 +62,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.last {
-        //let coord = CLLocationCoordinate2D(latitude: 34.0219, longitude: 118.4814)
+        //if let location = locations.last {
+        let coord = CLLocationCoordinate2D(latitude: 34.0219, longitude: 118.4814)
         //let location = CLLocation.init(coordinate: coord, altitude: 3, horizontalAccuracy: 4, verticalAccuracy: 4, timestamp: NSDate())
-        //let location = CLLocation.init(coordinate: coord, altitude: 18, horizontalAccuracy: 4, verticalAccuracy: 4, timestamp: NSDate())
+        let location = CLLocation.init(coordinate: coord, altitude: 18, horizontalAccuracy: 4, verticalAccuracy: 4, timestamp: NSDate())
             loadingSpinner.stopAnimating()
             let seaLevelFinder = SealevelFinder()
             if let result = seaLevelFinder.atSeaLevel(location.altitude, verticalAccuracy: location.verticalAccuracy) {
@@ -65,7 +79,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             else {
                 displayQuestion()
             }
-        }
+        //}
     }
     
     func displayYes() {

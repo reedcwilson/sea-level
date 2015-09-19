@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -63,14 +64,28 @@
                                     <action selector="detectSeaLevelExecute:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7HS-nt-kWY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QR1-ja-Y2j">
+                                <rect key="frame" x="542" y="556" width="30" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="⚙">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="settingsButtonExecute:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NFt-oL-9Ih"/>
+                                    <segue destination="fC1-Mt-zJz" kind="presentation" id="AQe-kN-azx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.23921568630000001" green="0.49803921569999998" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="yDv-A3-MwQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="0tT-ey-Au1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QR1-ja-Y2j" secondAttribute="trailing" constant="8" id="2Qz-AP-dVM"/>
                             <constraint firstItem="Fu2-zd-Y7y" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4iX-gg-Iqy"/>
                             <constraint firstItem="i1q-QF-vMm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="D1W-Pa-AMt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QR1-ja-Y2j" secondAttribute="bottom" constant="8" id="EdY-Fr-VNE"/>
                             <constraint firstItem="i1q-QF-vMm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ICc-e4-23q"/>
                             <constraint firstItem="ckA-tN-N6J" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UGQ-4l-NEM"/>
+                            <constraint firstItem="QR1-ja-Y2j" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="4" id="VdT-LQ-q1J"/>
                             <constraint firstItem="P95-XP-VjM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cLt-IA-2d4"/>
                             <constraint firstItem="e28-VF-Ffo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="e8O-XX-lu5"/>
                             <constraint firstItem="yDv-A3-MwQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g99-bk-r8F"/>
@@ -79,6 +94,11 @@
                             <constraint firstItem="Fu2-zd-Y7y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uUR-uj-HSL"/>
                             <constraint firstItem="e28-VF-Ffo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wAx-zY-G8B"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="VdT-LQ-q1J"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="detectSeaLevelButton" destination="ckA-tN-N6J" id="Xg8-bj-81v"/>
@@ -93,6 +113,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="325" y="388"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="Rm3-l0-kXZ">
+            <objects>
+                <viewController id="fC1-Mt-zJz" customClass="SettingsViewController" customModule="Sea_Level" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hET-VC-Yf4"/>
+                        <viewControllerLayoutGuide type="bottom" id="7JR-yh-wOz"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="xkS-fV-5ew">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tt7-1X-jSl">
+                                <rect key="frame" x="535" y="28" width="37" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonExecute:" destination="fC1-Mt-zJz" eventType="touchUpInside" id="Yd9-nk-IvA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tt7-1X-jSl" secondAttribute="trailing" constant="8" id="FNI-0a-zwv"/>
+                            <constraint firstItem="Tt7-1X-jSl" firstAttribute="top" secondItem="hET-VC-Yf4" secondAttribute="bottom" constant="8" id="i9e-sO-Jlm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TpM-S6-9I1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1015" y="388"/>
         </scene>
     </scenes>
 </document>

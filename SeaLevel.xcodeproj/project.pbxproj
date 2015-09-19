@@ -15,6 +15,7 @@
 		B17810B81BAB4A81004DC2B7 /* SeaLevelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17810B71BAB4A81004DC2B7 /* SeaLevelTests.swift */; };
 		B17810C31BAB4A81004DC2B7 /* SeaLevelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17810C21BAB4A81004DC2B7 /* SeaLevelUITests.swift */; };
 		B17810D31BAB4BA0004DC2B7 /* SeaLevelFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17810D21BAB4BA0004DC2B7 /* SeaLevelFinder.swift */; settings = {ASSET_TAGS = (); }; };
+		B17810D51BACC08F004DC2B7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17810D41BACC08F004DC2B7 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		B17810C21BAB4A81004DC2B7 /* SeaLevelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeaLevelUITests.swift; sourceTree = "<group>"; };
 		B17810C41BAB4A81004DC2B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B17810D21BAB4BA0004DC2B7 /* SeaLevelFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeaLevelFinder.swift; sourceTree = "<group>"; };
+		B17810D41BACC08F004DC2B7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				B17810A91BAB4A81004DC2B7 /* Assets.xcassets */,
 				B17810AB1BAB4A81004DC2B7 /* LaunchScreen.storyboard */,
 				B17810AE1BAB4A81004DC2B7 /* Info.plist */,
+				B17810D41BACC08F004DC2B7 /* SettingsViewController.swift */,
 			);
 			path = SeaLevel;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				B17810D31BAB4BA0004DC2B7 /* SeaLevelFinder.swift in Sources */,
 				B17810A51BAB4A81004DC2B7 /* ViewController.swift in Sources */,
 				B17810A31BAB4A81004DC2B7 /* AppDelegate.swift in Sources */,
+				B17810D51BACC08F004DC2B7 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
