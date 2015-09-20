@@ -23,6 +23,14 @@ class SeaLevelTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+
+    func testNegativeVerticalAccuracyReturnsNil() {
+        var result = seaLevelFinder!.atSeaLevel(CLLocationDistance(0), verticalAccuracy: CLLocationAccuracy(-1))
+        XCTAssertNil(result)
+
+        result = seaLevelFinder!.atSeaLevel(CLLocationDistance(16), verticalAccuracy: CLLocationAccuracy(-0.5))
+        XCTAssertNil(result)
+    }
     
     func testAtSeaLevel() {
         // test location distance (altitude)
