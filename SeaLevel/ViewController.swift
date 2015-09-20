@@ -21,19 +21,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let settingsUrl: NSURL? = NSURL(string: UIApplicationOpenSettingsURLString)
         UIApplication.sharedApplication().openURL(settingsUrl!)
     }
-    
-    @IBAction func settingsButtonExecute(sender: AnyObject) {
-        let settingsViewController = SettingsViewController()
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = self.view.bounds;
-        
-        settingsViewController.view.frame = self.view.bounds;
-        settingsViewController.view.backgroundColor = UIColor.clearColor()
-        settingsViewController.view.insertSubview(blurEffectView, atIndex:0)
-        settingsViewController.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
-        
-        self.presentViewController(settingsViewController, animated:true, completion:nil)
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.destinationViewController is SettingsViewController {
+            let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+
+            let settingsViewController = segue.destinationViewController
+            blurEffectView.frame = settingsViewController.view.bounds;
+            settingsViewController.view.insertSubview(blurEffectView, atIndex:0)
+        }
     }
     
     override func viewDidLoad() {
