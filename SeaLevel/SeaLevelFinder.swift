@@ -12,7 +12,7 @@ class SealevelFinder {
     
     func atSeaLevel(altitude: CLLocationDistance?, verticalAccuracy: CLLocationAccuracy) -> Bool? {
         var result: Bool? = nil
-        if verticalAccuracy > -1 {
+        if verticalAccuracy >= 0 {
             if altitude <= padding && altitude >= -padding {
                 result = true
             }
