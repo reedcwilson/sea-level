@@ -26,7 +26,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         if segue.destinationViewController is SettingsViewController {
             let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
             let blurEffectView = UIVisualEffectView(effect: blurEffect)
-
             let settingsViewController = segue.destinationViewController
             blurEffectView.frame = settingsViewController.view.bounds;
             settingsViewController.view.insertSubview(blurEffectView, atIndex:0)

@@ -14,7 +14,6 @@ class SealevelFinder {
         if verticalAccuracy < 0 {
             return nil
         }
-
         return altitude <= padding && altitude >= -padding;
     }
 
