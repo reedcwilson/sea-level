@@ -36,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B178109F1BAB4A81004DC2B7 /* Sea Level.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sea Level.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B178109F1BAB4A81004DC2B7 /* SeaLevel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeaLevel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B17810A21BAB4A81004DC2B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B17810A41BAB4A81004DC2B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B17810A71BAB4A81004DC2B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		B17810A01BAB4A81004DC2B7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B178109F1BAB4A81004DC2B7 /* Sea Level.app */,
+				B178109F1BAB4A81004DC2B7 /* SeaLevel.app */,
 				B17810B31BAB4A81004DC2B7 /* SeaLevelTests.xctest */,
 				B17810BE1BAB4A81004DC2B7 /* SeaLevelUITests.xctest */,
 			);
@@ -148,7 +148,7 @@
 			);
 			name = SeaLevel;
 			productName = SeaLevel;
-			productReference = B178109F1BAB4A81004DC2B7 /* Sea Level.app */;
+			productReference = B178109F1BAB4A81004DC2B7 /* SeaLevel.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B17810B21BAB4A81004DC2B7 /* SeaLevelTests */ = {
@@ -413,7 +413,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reedcwilson.SeaLevel;
-				PRODUCT_NAME = "Sea Level";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
@@ -425,7 +425,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reedcwilson.SeaLevel;
-				PRODUCT_NAME = "Sea Level";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
