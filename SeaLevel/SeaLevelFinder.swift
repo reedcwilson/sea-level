@@ -6,15 +6,27 @@
 import Foundation
 import CoreLocation
 
+enum AtSeaLevel {
+    case Yes
+    case Above
+    case Below
+}
+
 class SealevelFinder {
     
-    let padding = CLLocationDistance(15)
-    
-    func atSeaLevel(altitude: CLLocationDistance?, verticalAccuracy: CLLocationAccuracy) -> Bool? {
+    func atSeaLevel(altitude: CLLocationDistance?, verticalAccuracy: CLLocationAccuracy, padding: CLLocationDistance) -> AtSeaLevel? {
         if verticalAccuracy < 0 {
             return nil
         }
-        return altitude <= padding && altitude >= -padding
+        if altitude <= padding && altitude >= -padding {
+            return AtSeaLevel.Yes
+        }
+        else if altitude > padding {
+            return AtSeaLevel.Above
+        }
+        else {
+            return AtSeaLevel.Below
+        }
     }
 
 }

@@ -7,9 +7,10 @@ import UIKit
 import Foundation
 import CoreLocation
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, SettingsViewDelegate {
     
     let manager = CLLocationManager()
+    var currentLocation: CLLocation? = nil
 
     @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
     @IBOutlet weak var yesLabel: UILabel!
@@ -26,10 +27,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         if segue.destinationViewController is SettingsViewController {
             let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
             let blurEffectView = UIVisualEffectView(effect: blurEffect)
-            let settingsViewController = segue.destinationViewController
+            let settingsViewController = segue.destinationViewController as! SettingsViewController
             blurEffectView.frame = settingsViewController.view.bounds;
+            settingsViewController.delegate = self
             settingsViewController.view.insertSubview(blurEffectView, atIndex:0)
         }
+    }
+    
+    func settingsViewDidFinish(controller: SettingsViewController) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
+        detectSeaLevel(currentLocation)
     }
     
     override func viewDidLoad() {
@@ -58,36 +65,53 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        loadingSpinner.stopAnimating()
         //if let location = locations.last {
-        let coord = CLLocationCoordinate2D(latitude: 34.0219, longitude: 118.4814)
-        //let location = CLLocation.init(coordinate: coord, altitude: 3, horizontalAccuracy: 4, verticalAccuracy: 4, timestamp: NSDate())
-        let location = CLLocation.init(coordinate: coord, altitude: 18, horizontalAccuracy: 4, verticalAccuracy: 4, timestamp: NSDate())
-            loadingSpinner.stopAnimating()
+            let coord = CLLocationCoordinate2D(latitude: 34.0219, longitude: 118.4814)
+            let location = CLLocation.init(coordinate: coord, altitude: -20, horizontalAccuracy: 4, verticalAccuracy: 4, timestamp: NSDate())
+            //let location = CLLocation.init(coordinate: coord, altitude: 18, horizontalAccuracy: 4, verticalAccuracy: 4, timestamp: NSDate())
+            currentLocation = location
+            detectSeaLevel(location)
+        //}
+    }
+    
+    func detectSeaLevel(location: CLLocation?) {
+        if location != nil {
             let seaLevelFinder = SealevelFinder()
-            if let result = seaLevelFinder.atSeaLevel(location.altitude, verticalAccuracy: location.verticalAccuracy) {
-                if result == true {
+            if let result = seaLevelFinder.atSeaLevel(location!.altitude, verticalAccuracy: location!.verticalAccuracy, padding: CLLocationDistance(PaddingManager.instance.getDefaultPaddingAsInt())) {
+                if result == AtSeaLevel.Yes {
                     displayYes()
                 }
+                else if result == AtSeaLevel.Above {
+                    displayAbove()
+                }
                 else {
-                    displayNo()
+                    displayBelow()
                 }
             }
             else {
                 displayQuestion()
             }
-        //}
+        }
     }
     
     func displayYes() {
         resetLabels()
         yesLabel.hidden = false
+        UIImageView()
         view?.backgroundColor = UIColor(patternImage: UIImage(named: "Ocean.png")!)
     }
     
-    func displayNo() {
+    func displayAbove() {
         resetLabels()
         noLabel.hidden = false
         view?.backgroundColor = UIColor(patternImage: UIImage(named: "Mountains.png")!)
+    }
+    
+    func displayBelow() {
+        resetLabels()
+        noLabel.hidden = false
+        view?.backgroundColor = UIColor(patternImage: UIImage(named: "Underwater")!)
     }
     
     func displayQuestion() {
