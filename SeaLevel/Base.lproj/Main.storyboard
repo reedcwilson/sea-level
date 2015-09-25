@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J2e-Up-Ej9">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Am I at sea level?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDv-A3-MwQ">
                                 <rect key="frame" x="157" y="50" width="286.5" height="42.5"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
@@ -82,23 +85,32 @@
                             <constraint firstItem="i1q-QF-vMm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="D1W-Pa-AMt"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QR1-ja-Y2j" secondAttribute="bottom" constant="8" id="EdY-Fr-VNE"/>
                             <constraint firstItem="i1q-QF-vMm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ICc-e4-23q"/>
+                            <constraint firstItem="J2e-Up-Ej9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KiA-Ip-kEi"/>
+                            <constraint firstItem="J2e-Up-Ej9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Nmb-tS-Yhf"/>
                             <constraint firstItem="ckA-tN-N6J" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UGQ-4l-NEM"/>
                             <constraint firstItem="QR1-ja-Y2j" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="4" id="VdT-LQ-q1J"/>
                             <constraint firstItem="P95-XP-VjM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cLt-IA-2d4"/>
                             <constraint firstItem="e28-VF-Ffo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="e8O-XX-lu5"/>
+                            <constraint firstItem="J2e-Up-Ej9" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="f12-7M-4Dx"/>
                             <constraint firstItem="yDv-A3-MwQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g99-bk-r8F"/>
                             <constraint firstItem="P95-XP-VjM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lxr-wE-x2B"/>
                             <constraint firstItem="ckA-tN-N6J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oBK-EA-xz6"/>
+                            <constraint firstItem="J2e-Up-Ej9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uPr-JV-NAX"/>
                             <constraint firstItem="Fu2-zd-Y7y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uUR-uj-HSL"/>
                             <constraint firstItem="e28-VF-Ffo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wAx-zY-G8B"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="KiA-Ip-kEi"/>
+                                <exclude reference="Nmb-tS-Yhf"/>
+                                <exclude reference="f12-7M-4Dx"/>
+                                <exclude reference="uPr-JV-NAX"/>
                                 <exclude reference="VdT-LQ-q1J"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="backgroundImageView" destination="J2e-Up-Ej9" id="FW4-93-vnJ"/>
                         <outlet property="detectSeaLevelButton" destination="ckA-tN-N6J" id="Xg8-bj-81v"/>
                         <outlet property="loadingSpinner" destination="P95-XP-VjM" id="r7u-ri-6VK"/>
                         <outlet property="noLabel" destination="Fu2-zd-Y7y" id="4x9-ND-FsS"/>
@@ -110,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325" y="388"/>
+            <point key="canvasLocation" x="348" y="312"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="Rm3-l0-kXZ">
@@ -189,7 +201,7 @@ you want to give it?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TpM-S6-9I1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1015" y="388"/>
+            <point key="canvasLocation" x="1036" y="312"/>
         </scene>
     </scenes>
 </document>

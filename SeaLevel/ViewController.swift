@@ -17,6 +17,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SettingsViewD
     @IBOutlet weak var noLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var detectSeaLevelButton: UIButton!
+    @IBOutlet weak var backgroundImageView: UIImageView!
     
     @IBAction func detectSeaLevelExecute(sender: UIButton) {
         let settingsUrl: NSURL? = NSURL(string: UIApplicationOpenSettingsURLString)
@@ -66,13 +67,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SettingsViewD
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         loadingSpinner.stopAnimating()
-        //if let location = locations.last {
-            let coord = CLLocationCoordinate2D(latitude: 34.0219, longitude: 118.4814)
-            let location = CLLocation.init(coordinate: coord, altitude: -20, horizontalAccuracy: 4, verticalAccuracy: 4, timestamp: NSDate())
+        if let location = locations.last {
+            //let coord = CLLocationCoordinate2D(latitude: 34.0219, longitude: 118.4814)
+            //let location = CLLocation.init(coordinate: coord, altitude: -20, horizontalAccuracy: 4, verticalAccuracy: 4, timestamp: NSDate())
             //let location = CLLocation.init(coordinate: coord, altitude: 18, horizontalAccuracy: 4, verticalAccuracy: 4, timestamp: NSDate())
             currentLocation = location
             detectSeaLevel(location)
-        //}
+        }
     }
     
     func detectSeaLevel(location: CLLocation?) {
@@ -96,40 +97,46 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SettingsViewD
     }
     
     func displayYes() {
-        resetLabels()
+        resetView()
         yesLabel.hidden = false
-        UIImageView()
-        view?.backgroundColor = UIColor(patternImage: UIImage(named: "Ocean.png")!)
+        backgroundImageView.image = UIImage(named: "Ocean.png")
+        backgroundImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        backgroundImageView.hidden = false
     }
     
     func displayAbove() {
-        resetLabels()
+        resetView()
         noLabel.hidden = false
-        view?.backgroundColor = UIColor(patternImage: UIImage(named: "Mountains.png")!)
+        backgroundImageView.image = UIImage(named: "Mountains.png")
+        backgroundImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        backgroundImageView.hidden = false
     }
     
     func displayBelow() {
-        resetLabels()
+        resetView()
         noLabel.hidden = false
-        view?.backgroundColor = UIColor(patternImage: UIImage(named: "Underwater")!)
+        backgroundImageView.image = UIImage(named: "Underwater.png")
+        backgroundImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        backgroundImageView.hidden = false
     }
     
     func displayQuestion() {
-        resetLabels()
+        resetView()
         questionLabel.hidden = false
     }
     
     func displayPermissionButton() {
-        resetLabels()
+        resetView()
         detectSeaLevelButton.hidden = false
     }
     
-    func resetLabels() {
+    func resetView() {
         loadingSpinner.hidden = true
         yesLabel.hidden = true
         noLabel.hidden = true
         questionLabel.hidden = true
         detectSeaLevelButton.hidden = true
+        backgroundImageView.hidden = true
     }
     
 }
