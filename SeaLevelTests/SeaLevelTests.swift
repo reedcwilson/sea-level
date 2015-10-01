@@ -25,48 +25,48 @@ class SeaLevelTests: XCTestCase {
     }
 
     func testNegativeVerticalAccuracyReturnsNil() {
-        var result = seaLevelFinder!.atSeaLevel(CLLocationDistance(0), verticalAccuracy: CLLocationAccuracy(-1))
+        var result = seaLevelFinder!.atSeaLevel(CLLocationDistance(0), verticalAccuracy: CLLocationAccuracy(-1), padding: CLLocationDistance(15))
         XCTAssertNil(result)
 
-        result = seaLevelFinder!.atSeaLevel(CLLocationDistance(16), verticalAccuracy: CLLocationAccuracy(-0.5))
+        result = seaLevelFinder!.atSeaLevel(CLLocationDistance(16), verticalAccuracy: CLLocationAccuracy(-0.5), padding: CLLocationDistance(15))
         XCTAssertNil(result)
     }
     
     func testAtSeaLevel() {
         // test location distance (altitude)
-        if let result = seaLevelFinder!.atSeaLevel(CLLocationDistance(16), verticalAccuracy: CLLocationAccuracy(9)) {
-            XCTAssertFalse(result)
+        if let result = seaLevelFinder!.atSeaLevel(CLLocationDistance(16), verticalAccuracy: CLLocationAccuracy(9), padding: CLLocationDistance(15)) {
+            XCTAssertEqual(AtSeaLevel.Above, result)
         }
-        if let result = seaLevelFinder!.atSeaLevel(CLLocationDistance(-16), verticalAccuracy: CLLocationAccuracy(9)) {
-            XCTAssertFalse(result)
+        if let result = seaLevelFinder!.atSeaLevel(CLLocationDistance(-16), verticalAccuracy: CLLocationAccuracy(9), padding: CLLocationDistance(15)) {
+            XCTAssertEqual(AtSeaLevel.Below, result)
         }
-        if let result = seaLevelFinder!.atSeaLevel(CLLocationDistance(15), verticalAccuracy: CLLocationAccuracy(9)) {
-            XCTAssertTrue(result)
+        if let result = seaLevelFinder!.atSeaLevel(CLLocationDistance(15), verticalAccuracy: CLLocationAccuracy(9), padding: CLLocationDistance(15)) {
+            XCTAssertEqual(AtSeaLevel.Yes, result)
         }
-        if let result = seaLevelFinder!.atSeaLevel(CLLocationDistance(-15), verticalAccuracy: CLLocationAccuracy(9)) {
-            XCTAssertTrue(result)
+        if let result = seaLevelFinder!.atSeaLevel(CLLocationDistance(-15), verticalAccuracy: CLLocationAccuracy(9), padding: CLLocationDistance(15)) {
+            XCTAssertEqual(AtSeaLevel.Yes, result)
         }
         
-        if let result = seaLevelFinder!.atSeaLevel(CLLocationDistance(14), verticalAccuracy: CLLocationAccuracy(9)) {
-            XCTAssertTrue(result)
+        if let result = seaLevelFinder!.atSeaLevel(CLLocationDistance(14), verticalAccuracy: CLLocationAccuracy(9), padding: CLLocationDistance(15)) {
+            XCTAssertEqual(AtSeaLevel.Yes, result)
         }
-        if let result = seaLevelFinder!.atSeaLevel(CLLocationDistance(-14), verticalAccuracy: CLLocationAccuracy(9)) {
-            XCTAssertTrue(result)
+        if let result = seaLevelFinder!.atSeaLevel(CLLocationDistance(-14), verticalAccuracy: CLLocationAccuracy(9), padding: CLLocationDistance(15)) {
+            XCTAssertEqual(AtSeaLevel.Yes, result)
         }
-        if let result = seaLevelFinder!.atSeaLevel(CLLocationDistance(4), verticalAccuracy: CLLocationAccuracy(9)) {
-            XCTAssertTrue(result)
+        if let result = seaLevelFinder!.atSeaLevel(CLLocationDistance(4), verticalAccuracy: CLLocationAccuracy(9), padding: CLLocationDistance(15)) {
+            XCTAssertEqual(AtSeaLevel.Yes, result)
         }
-        if let result = seaLevelFinder!.atSeaLevel(CLLocationDistance(-4), verticalAccuracy: CLLocationAccuracy(9)) {
-            XCTAssertTrue(result)
+        if let result = seaLevelFinder!.atSeaLevel(CLLocationDistance(-4), verticalAccuracy: CLLocationAccuracy(9), padding: CLLocationDistance(15)) {
+            XCTAssertEqual(AtSeaLevel.Yes, result)
         }
-        if let result = seaLevelFinder!.atSeaLevel(CLLocationDistance(0), verticalAccuracy: CLLocationAccuracy(9)) {
-            XCTAssertTrue(result)
+        if let result = seaLevelFinder!.atSeaLevel(CLLocationDistance(0), verticalAccuracy: CLLocationAccuracy(9), padding: CLLocationDistance(15)) {
+            XCTAssertEqual(AtSeaLevel.Yes, result)
         }
         
         // test location accuracy
-        XCTAssertTrue(seaLevelFinder!.atSeaLevel(CLLocationDistance(0), verticalAccuracy: CLLocationAccuracy(-1)) == nil)
-        if let result = seaLevelFinder!.atSeaLevel(CLLocationDistance(0), verticalAccuracy: CLLocationAccuracy(10)) {
-            XCTAssertTrue(result)
+        XCTAssertEqual(nil, seaLevelFinder!.atSeaLevel(CLLocationDistance(0), verticalAccuracy: CLLocationAccuracy(-1), padding: CLLocationDistance(15)))
+        if let result = seaLevelFinder!.atSeaLevel(CLLocationDistance(0), verticalAccuracy: CLLocationAccuracy(10), padding: CLLocationDistance(15)) {
+            XCTAssertEqual(AtSeaLevel.Yes, result)
         }
     }
     

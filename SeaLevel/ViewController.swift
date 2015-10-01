@@ -11,6 +11,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SettingsViewD
     
     let manager = CLLocationManager()
     var currentLocation: CLLocation? = nil
+    let paddingManager = PaddingManager()
 
     @IBOutlet weak var loadingSpinner: UIActivityIndicatorView!
     @IBOutlet weak var yesLabel: UILabel!
@@ -29,8 +30,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SettingsViewD
             let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
             let blurEffectView = UIVisualEffectView(effect: blurEffect)
             let settingsViewController = segue.destinationViewController as! SettingsViewController
-            blurEffectView.frame = settingsViewController.view.bounds;
             settingsViewController.delegate = self
+            blurEffectView.frame = settingsViewController.view.bounds;
             settingsViewController.view.insertSubview(blurEffectView, atIndex:0)
         }
     }
@@ -38,6 +39,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SettingsViewD
     func settingsViewDidFinish(controller: SettingsViewController) {
         controller.dismissViewControllerAnimated(true, completion: nil)
         detectSeaLevel(currentLocation)
+    }
+    
+    func getPaddingManager() -> PaddingManager {
+        return self.paddingManager
     }
     
     override func viewDidLoad() {
@@ -79,7 +84,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SettingsViewD
     func detectSeaLevel(location: CLLocation?) {
         if location != nil {
             let seaLevelFinder = SealevelFinder()
-            if let result = seaLevelFinder.atSeaLevel(location!.altitude, verticalAccuracy: location!.verticalAccuracy, padding: CLLocationDistance(PaddingManager.instance.getDefaultPaddingAsInt())) {
+            if let result = seaLevelFinder.atSeaLevel(location!.altitude, verticalAccuracy: location!.verticalAccuracy, padding: CLLocationDistance(paddingManager.getDefaultPaddingAsInt())) {
                 if result == AtSeaLevel.Yes {
                     displayYes()
                 }
