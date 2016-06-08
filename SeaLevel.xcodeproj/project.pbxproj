@@ -17,6 +17,8 @@
 		B17810D31BAB4BA0004DC2B7 /* SeaLevelFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17810D21BAB4BA0004DC2B7 /* SeaLevelFinder.swift */; };
 		B17810D51BACC08F004DC2B7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17810D41BACC08F004DC2B7 /* SettingsViewController.swift */; };
 		B17810D91BB4433B004DC2B7 /* PaddingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17810D81BB4433B004DC2B7 /* PaddingManager.swift */; };
+		F69456D51D08B7500016F656 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69456D31D08B7500016F656 /* Fabric.framework */; };
+		F69456D61D08B7500016F656 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69456D41D08B7500016F656 /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		B17810D21BAB4BA0004DC2B7 /* SeaLevelFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeaLevelFinder.swift; sourceTree = "<group>"; };
 		B17810D41BACC08F004DC2B7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B17810D81BB4433B004DC2B7 /* PaddingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingManager.swift; sourceTree = "<group>"; };
+		F69456D31D08B7500016F656 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		F69456D41D08B7500016F656 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F69456D61D08B7500016F656 /* Crashlytics.framework in Frameworks */,
+				F69456D51D08B7500016F656 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +93,8 @@
 				B17810B61BAB4A81004DC2B7 /* SeaLevelTests */,
 				B17810C11BAB4A81004DC2B7 /* SeaLevelUITests */,
 				B17810A01BAB4A81004DC2B7 /* Products */,
+				F69456D31D08B7500016F656 /* Fabric.framework */,
+				F69456D41D08B7500016F656 /* Crashlytics.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +152,7 @@
 				B178109B1BAB4A81004DC2B7 /* Sources */,
 				B178109C1BAB4A81004DC2B7 /* Frameworks */,
 				B178109D1BAB4A81004DC2B7 /* Resources */,
+				F69456D21D08B7420016F656 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -261,6 +270,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F69456D21D08B7420016F656 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run dc80eb6a87a5b3fcd85d15506e5d6d9d086d12e8 7c31df275e6980c72b02cb5b33df75fc13586d49c3bbfc148bea83a4afd88547";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B178109B1BAB4A81004DC2B7 /* Sources */ = {
@@ -413,6 +438,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SeaLevel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -425,6 +454,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SeaLevel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
