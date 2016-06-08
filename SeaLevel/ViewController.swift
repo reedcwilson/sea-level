@@ -55,6 +55,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SettingsViewD
         if CLLocationManager.authorizationStatus() == .NotDetermined {
             manager.requestWhenInUseAuthorization()
         }
+//        locationManager(manager, didUpdateLocations: [])
     }
 
     func locationManager(location: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus)
@@ -73,9 +74,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, SettingsViewD
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         loadingSpinner.stopAnimating()
         if let location = locations.last {
-            //let coord = CLLocationCoordinate2D(latitude: 34.0219, longitude: 118.4814)
-            //let location = CLLocation.init(coordinate: coord, altitude: -20, horizontalAccuracy: 4, verticalAccuracy: 4, timestamp: NSDate())
-            //let location = CLLocation.init(coordinate: coord, altitude: 18, horizontalAccuracy: 4, verticalAccuracy: 4, timestamp: NSDate())
+//            let coord = CLLocationCoordinate2D(latitude: 34.0219, longitude: 118.4814)
+//            let location = CLLocation.init(coordinate: coord, altitude: -20, horizontalAccuracy: 4, verticalAccuracy: 4, timestamp: NSDate())
+//            let location = CLLocation.init(coordinate: coord, altitude: 18, horizontalAccuracy: 4, verticalAccuracy: 4, timestamp: NSDate())
             currentLocation = location
             detectSeaLevel(location)
         }
